@@ -8,3 +8,6 @@ CREATE TABLE items
     done BOOLEAN DEFAULT false,
     PRIMARY KEY (id)
 );
+
+INSERT INTO items (name, done) VALUES ('Go to the gymr', false);
+INSERT INTO items (name, done) VALUES ('Start wash', false);

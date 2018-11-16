@@ -1,0 +1,42 @@
+<h1> To Do List: </h1>
+
+<ul>
+    {{#each items}}
+    {{#unless done}}
+    {{> todos/todo-block done=true}}
+    {{/unless}}
+    {{/each}}
+</ul>
+
+
+<h2>Completed tasks!</h2>
+
+<ul>
+    {{#each items}}
+    {{#if done}}
+    {{> todos/todo-block done=false }}
+    {{/if}}
+    {{/each}}
+</ul>
+
+<h1>Add Task to Complete</h1>
+
+<form class="create-form">
+    <div class="form-group">
+     <label for="td">New Task</label>
+    <input type="text" id="td" name="name">
+  </div>
+
+
+
+   <div class="form-group">
+    <label for="Done">Completed!</label><br>
+    <input type="radio" name="done" value="1" checked> Not Done!<br>
+    <input type="radio" name="done" value="0"> Done
+  </div>
+
+
+<button type="submit">Add ToDo Item</button>
+
+
+</form>
